@@ -47,6 +47,7 @@ groupsテーブル
 Association
 - has_many :messeages
 - has_many :users
+- has_many :users, through: :groups_users
 
 groups_usersテーブル
 

@@ -27,26 +27,25 @@ usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|id|
-|name|string|null: false|
+|name|string|null: false, index: true|
 |email|string|unique: true|
 |password|string|null: false|
 
 Association
-- has_many :messeages
-- has_many :groups
+- has_many :messages
+- has_many :groups_users
 - has_many :groups, through: :groups_users
 
 groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|id|
-|group_name|string|null: false|
+|name|string|null: false|
 
 Association
-- has_many :messeages
-- has_many :users
+- has_many :messages
+- has_many :groups_users
+- has_many :users, through: :groups_users
 
 groups_usersテーブル
 
@@ -59,14 +58,14 @@ Association
 - belongs_to :group
 - belongs_to :user
 
-messeagesテーブル
+messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |text|text|
 |image|string|
 |user_id|integer|null: false, foreign_key: true|
-|group_id|intrger|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
 Association
 - belongs_to :user

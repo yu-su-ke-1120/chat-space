@@ -1,0 +1,37 @@
+.chat-main {
+  float: right;
+  width: calc(100vw - 300px);
+  height: 100%;
+  &__contents {
+    height: 100px;
+    width: calc(100vw - 300px);
+    background-color: $white;
+    position: relative;
+    border-bottom: solid thin #eeeeee;
+    &__left-box {
+      padding: 0 40px 0 40px;
+      &__group-name {
+        font-size: 20px;
+        color: #333333;
+        padding: 35px 0 15px 0; 
+    }
+      &__members {
+        color: $light-gray;
+        &-list {
+          display: inline-block;
+        }
+      }
+    }
+    &__edit-btn {
+      height: 40px;
+      line-height: 40px;
+      width: 72px;
+      text-align: center;
+      position: absolute;
+      top: 28px;
+      right: 40px;
+      color: $light-blue;
+      border: solid thin $light-blue;
+    }
+  }
+}

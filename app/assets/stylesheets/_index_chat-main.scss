@@ -1,0 +1,114 @@
+.chat-main {
+  height: 100%;
+  width: calc(100vw - 300px);
+  float: right;
+  &__header {
+    height: 100px;
+    background-color: $white;
+    padding: 0 40px;
+    border-bottom: solid 1px #eeeeee;
+    &__left-box {
+      line-height: center;
+      &__group-name {
+        font-size: 20px;
+        color: #333333;
+        padding-top: 35px;
+      }
+      &__members {
+        font-size: 12px;
+        color: $light-gray;
+        padding-top: 15px;
+        &-list {
+          display: inline-block;
+        }
+      }
+    }
+    &__edit-btn {
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      margin-top: 30px;
+      border: solid 1px $light-blue;
+      position: absolute;
+      right: 40px;
+      top: 0;
+      .btn {
+        color: $light-blue;
+        text-decoration: none;
+      }
+    }
+  }
+  &__messages {
+    height: calc(100vh - 190px);
+    background-color: #fafafa;
+    .massege {
+      padding: 46px 40px 0 40px;
+      .chat-main__messages__upper-info {
+        margin-bottom: 10px;
+        display: flex;
+        &--talker {
+          font-size: 16px;
+          font-weight: bold;
+          color: $text-color;
+          float: left;
+        }
+        &--date {
+          font-size: 12px;
+          color: $light-gray;
+          margin-left: 10px;
+          float: left;
+        }
+      }
+      .chat-main__messages__text {
+        font-size: 14px;
+        color: $text-color;
+        clear: both; 
+      }
+    }
+  }
+  &__footer {
+    height: 90px;
+    width: calc(100vw - 300px);
+    background-color: $gray;
+    position: fixed;
+    bottom: 0;
+    .new_message {
+      padding: 20px 40px;
+      display: flex;
+      .input-box {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        
+        &__text { 
+          height: 50px;
+          width: 100%;
+          border-style: none;
+          padding-left: 10px;
+        }
+        &__image {
+
+          position: absolute;
+          right: 15px;
+          top: 10px;
+          &__file {
+            display: none;
+          }
+        }
+    }
+    .submit-btn {
+      background-color: $light-blue;
+      color: $white;
+      height: 50px;
+      padding: 0 30px;
+      margin-left: 15px;
+    } 
+  }
+  }
+}
+
+input::placeholder {
+  color: $text-color;
+  font-size: 16px;
+}

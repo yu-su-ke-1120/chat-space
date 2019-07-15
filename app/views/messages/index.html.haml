@@ -1,52 +1,44 @@
-!!!
-%html
-  %head
-    %meta(charset="UTF-8")
-    %title ChatSpace
-    %link{:rel => "stylesheet", :href => "style.css"}
-%body
-  .wrapper
-    .chat-side
-      .chat-side__user
-        .chat-side__user__content
-          .chat-side__user--name
-            ユーザーネーム
-          %ul.chat-side__btn
-            %li.list
-              = link_to "" do
-                =fa_icon 'pencil-square-o', class: "icon"
-            %li.list
-              = link_to "" do
-                =fa_icon 'cog', class: "icon"
-      .chat-side__groups
-        .chat-side__groups__list
-          .chat-side__group--name
-            グループ名
-          .chat-side__group--message
-            メッセージ
+.chat-side
+  .chat-side__user
+    .chat-side__user__content
+      .chat-side__user--name
+        ユーザーネーム
+      %ul.chat-side__btn
+        %li.list
+          = link_to "" do
+            =fa_icon 'pencil-square-o', class: "icon"
+        %li.list
+          = link_to "" do
+            =fa_icon 'cog', class: "icon"
+  .chat-side__groups
+    .chat-side__groups__list
+      .chat-side__group--name
+        グループ名
+      .chat-side__group--message
+        メッセージ
 
-    .chat-main
-      .chat-main__header
-        .chat-main__header__left-box
-          .chat-main__header__left-box__group-name
-            グループ名
-          %ul.chat-main__header__left-box__members
-            Member:
-            %li.chat-main__header__left-box__members-list
-              yusuke
-            %li.chat-main__header__left-box__members-list
-              misaki
-        %a.chat-main__header__edit-btn{:href => "パス"}
-          Edit
-            
-      .chat-main__messages
-        =render 'message'
+.chat-main
+  .chat-main__header
+    .chat-main__header__left-box
+      .chat-main__header__left-box__group-name
+        グループ名
+      %ul.chat-main__header__left-box__members
+        Member:
+        %li.chat-main__header__left-box__members-list
+          yusuke
+        %li.chat-main__header__left-box__members-list
+          misaki
+    %a.chat-main__header__edit-btn{:href => "パス"}
+      Edit
+        
+  .chat-main__messages
+    =render 'message'
 
-      .chat-main__footer
-        %form.new_message{:action => "", :method => "post"}
-          .input-box
-            %input.input-box__text{:placeholder => "type a message", :type => "text"}
-            %label.input-box__image
-              %input.input-box__image__file{:type => "file"}
-                =fa_icon 'picture-o', class: "fa-image"
-          %input.submit-btn{:type => "submit",:value => "Send"}
+  .chat-main__footer
+    %form.new_message{:action => "", :method => "post"}
+      .input-box
+        %input.input-box__text{:placeholder => "type a message", :type => "text"}
+        %label.input-box__image
+          %input.input-box__image__file{:type => "file"}
+            =fa_icon 'picture-o', class: "fa-image"
+      %input.submit-btn{:type => "submit",:value => "Send"}

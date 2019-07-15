@@ -28,17 +28,18 @@
           yusuke
         %li.chat-main__header__left-box__members-list
           misaki
-    %a.chat-main__header__edit-btn{:href => "パス"}
-      Edit
+    .chat-main__header__edit-btn
+      = link_to "#", class: "btn" do
+        Edit
         
   .chat-main__messages
     =render 'message'
 
   .chat-main__footer
-    %form.new_message{:action => "", :method => "post"}
+    %form.new_message{action: "#", method: "post"}
       .input-box
-        %input.input-box__text{:placeholder => "type a message", :type => "text"}
+        %input.input-box__text{placeholder: "type a message", type: "text"}
         %label.input-box__image
-          %input.input-box__image__file{:type => "file"}
+          %input.input-box__image__file{type: "file"}
             =fa_icon 'picture-o', class: "fa-image"
-      %input.submit-btn{:type => "submit",:value => "Send"}
+      %input.submit-btn{type: "submit",value: "Send"}

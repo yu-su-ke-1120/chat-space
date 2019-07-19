@@ -6,10 +6,12 @@
   &__user {
     position: fixed;
     width: 300px;
-    height: 100px;
+    height: 100%;
     background-color: $side-blue-top;
     &__content{
-      padding: 35px 20px 35px 20px;
+      height: 100px;
+      padding: 0 20px;
+      line-height: 100px;
       .chat-side__user--name {
         font-size: 16px;
         font-weight: bold;
@@ -31,7 +33,6 @@
     background-color: $side-blue-bottom;
     width: 300ox;
     height: 100%;
-    margin: 100px 0 0 0;
     padding: 0 20px 0 20px;
     &__list {
       .chat-side__group--name {

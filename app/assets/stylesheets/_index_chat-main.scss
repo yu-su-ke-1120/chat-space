@@ -66,6 +66,10 @@
         color: $text-color;
         clear: both; 
       }
+      .chat-main__message__image {
+        height: 125px;
+        width: 200px;
+      }
     }
   }
   &__footer {
@@ -87,6 +91,7 @@
           float: left;
           height: 50px;
           width: calc(100% - 150px);
+          padding-left: 10px;
         }
         .form__mask {
           background-color: $white;

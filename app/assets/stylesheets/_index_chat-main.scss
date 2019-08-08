@@ -41,8 +41,10 @@
   &__messages {
     height: calc(100vh - 190px);
     background-color: #fafafa;
-    .massege {
-      padding: 46px 40px 0 40px;
+    padding: 46px 40px;
+    overflow: scroll;
+    .message {
+      padding-bottom: 40px;
       .chat-main__messages__upper-info {
         margin-bottom: 10px;
         display: flex;
@@ -59,7 +61,7 @@
           float: left;
         }
       }
-      .chat-main__messages__text {
+      .chat-main__messages__box--text {
         font-size: 14px;
         color: $text-color;
         clear: both; 
@@ -69,46 +71,50 @@
   &__footer {
     height: 90px;
     width: calc(100vw - 300px);
-    background-color: $gray;
     position: fixed;
     bottom: 0;
+    background-color: $gray;
     .form {
       background-color: #DDDDDD;
       box-sizing: border-box;
       height: 90px;
       padding: 20px 50px 20px 40px;
-      &__message {
-        border: none;
-        float: left;
+      .new_message {
         height: 50px;
-        width: calc(100% - 150px);
-      }
-      &__mask {
-        background-color: $white;
-        float: left;
-        height: 50px;
-        padding-right: 10px;
-        &__image {
-          font-size: 20px;
-          line-height: 50px;
+        display: flex;
+        .form__message {
+          border: none;
+          float: left;
+          height: 50px;
+          width: calc(100% - 150px);
         }
-        .hidden {
-          display: none;
+        .form__mask {
+          background-color: $white;
+          float: left;
+          height: 50px;
+          padding-right: 10px;
+          &__image {
+            font-size: 20px;
+            line-height: 50px;
+          }
+          .hidden {
+            display: none;
+          }
         }
       }
-      &__submit {
-        background-color: $light_blue;
-        border: none;
-        color: $white;
-        float: right;
-        font-size: 16px;
-        height: 50px;
-        margin-left: 15px;
-        padding: 0 30px;
+        &__submit {
+          background-color: $light_blue;
+          border: none;
+          color: $white;
+          float: right;
+          font-size: 16px;
+          height: 50px;
+          margin-left: 15px;
+          padding: 0 30px;
+        }
       }
     }
-  }
-}
+  }   
 
 input::placeholder {
   color: $text-color;

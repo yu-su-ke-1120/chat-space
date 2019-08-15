@@ -31,11 +31,8 @@
       border: solid 1px $light-blue;
       position: absolute;
       right: 40px;
-      top: 0;
-      .btn {
-        color: $light-blue;
-        text-decoration: none;
-      }
+      top: 0;color: $light-blue;
+      text-decoration: none;
     }
   }
   &__messages {

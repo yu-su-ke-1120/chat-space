@@ -11,9 +11,8 @@
         %li.chat-main__header__left-box__members-list
           - @group.users.each do |user|
             = user.name
-    .chat-main__header__edit-btn
-      = link_to "#", class: "btn" do
-        Edit
+    %a.chat-main__header__edit-btn{href: "edit"}
+      Edit
         
   .chat-main__messages
     = render @messages

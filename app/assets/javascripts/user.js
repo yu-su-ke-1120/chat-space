@@ -32,6 +32,7 @@ $(function(){
     })
     
     .done(function(users){
+      console.log(users);
       $('#user-search-result').empty();
       if (users.length !== 0){
         users.forEach(function(user){
@@ -48,8 +49,8 @@ $(function(){
   });
   $(document).on("click", ".user-search-add.chat-group-user__btn.chat-group-user__btn--add", function(){
     $(this).parent().remove();
-    var user_name = $(this).attr('data-user-name');
-    var user_id = $(this).attr('data-user-id');
+    var user_name = $(this).data('user-name');
+    var user_id = $(this).data('user-id');
     appendMember(user_name, user_id)
   })
   $(document).on("click", ".user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn", function(){

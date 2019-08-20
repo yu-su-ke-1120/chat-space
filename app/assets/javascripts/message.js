@@ -62,7 +62,7 @@ $(function() {
         $('.chat-main__messages').animate({ scrollTop: $('.chat-main__messages')[0].scrollHeight});
       })
       .fail(function(){
-        console.log('error!!!');
+        alert('error!!!');
       });
     }else {
       clearInterval(reloadMessages);
